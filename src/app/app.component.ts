@@ -15,5 +15,6 @@ export class AppComponent {
   // Method triggered when a number button is pressed
   pressNum = (num: string) => {
     console.log(num);
+    this.input = this.input + num;
   };
 }
