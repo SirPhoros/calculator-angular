@@ -1,23 +1,41 @@
 <body>
   <section class="displayer">
     <!-- //Displays the User Input -->
-    <section><p class="userInput">Hello</p></section>
+    <section>
+      <p class="userInput">{{ input }}</p>
+    </section>
   </section>
   <!-- //Displays the Results -->
   <section class="input-group input-group-sm col-sm-12 m-0 p-0">
-    <p>Result</p>
+    <p>{{ result }}</p>
   </section>
   <section class="buttons-1">
-    <button>AC</button><button>X</button><button>/</button>
+    <button>AC</button>
+    <button>C</button>
+    <button>/</button>
   </section>
   <section class="buttons-2">
-    <button>7</button><button>8</button><button>9</button><button>*</button>
+    <button type="button" (click)="pressNum('7')">7</button>
+    <button type="button" (click)="pressNum('8')">8</button>
+    <button type="button" (click)="pressNum('9')">9</button>
+    <button>*</button>
   </section>
   <section class="buttons-3">
-    <button>4</button><button>5</button><button>6</button><button>-</button>
+    <button type="button" (click)="pressNum('4')">4</button>
+    <button type="button" (click)="pressNum('5')">5</button>
+    <button type="button" (click)="pressNum('6')">6</button>
+    <button>-</button>
   </section>
   <section class="buttons-4">
-    <button>.</button><button>0</button><button>=</button>
+    <button type="button" (click)="pressNum('1')">1</button>
+    <button type="button" (click)="pressNum('2')">2</button>
+    <button type="button" (click)="pressNum('3')">3</button>
+    <button>-</button>
+  </section>
+  <section class="buttons-5">
+    <button type="button" (click)="pressNum('0')">.</button>
+    <button type="button" (click)="pressNum('0')">0</button>
+    <button>=</button>
   </section>
 </body>
 <router-outlet></router-outlet>
