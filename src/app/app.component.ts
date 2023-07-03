@@ -14,10 +14,50 @@ export class AppComponent {
 
   // Method triggered when a number button is pressed
   pressNum = (num: string) => {
+    // Do not allow '.' more than once
+    if (num == '.') {
+      if (this.input != '') {
+        const lastNum = this.getLastOperand();
+        console.log(lastNum.lastIndexOf('.'));
+        if (lastNum.lastIndexOf('.') >= 0) return;
+      }
+    }
+
+    // Do not allow '0' at the beginning unless preceded by an operator
+    if (num == '0') {
+      if (this.input == '') {
+        return;
+      }
+      const prevKey = this.input[this.input.length - 1];
+      if (
+        prevKey === '/' ||
+        prevKey === '*' ||
+        prevKey === '-' ||
+        prevKey === '+'
+      ) {
+        return;
+      }
+    }
+
     // Append the pressed number to the input and calculate the answer
     this.input = this.input + num;
     this.calcAnswer();
   };
+
+  // Method to get the last operand from the input
+  getLastOperand() {
+    let pos: number;
+    console.log(this.input);
+    pos = this.input.toString().lastIndexOf('+');
+    if (this.input.toString().lastIndexOf('-') > pos)
+      pos = this.input.lastIndexOf('-');
+    if (this.input.toString().lastIndexOf('*') > pos)
+      pos = this.input.lastIndexOf('*');
+    if (this.input.toString().lastIndexOf('/') > pos)
+      pos = this.input.lastIndexOf('/');
+    console.log('Last ' + this.input.slice(pos + 1));
+    return this.input.slice(pos + 1);
+  }
 
   // Method triggered when an operator button is pressed
   operator(op: string) {
@@ -101,5 +141,12 @@ export class AppComponent {
     }
 
     return result.toString();
+  }
+
+   // Method triggered when the equal button is pressed
+   getAnswer() {
+    this.calcAnswer();
+    this.input = this.result;
+    if (this.input == '0') this.input = '';
   }
 }
