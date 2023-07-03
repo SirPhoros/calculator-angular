@@ -12,25 +12,25 @@
   <section class="buttons-1">
     <button>AC</button>
     <button>C</button>
-    <button>/</button>
+    <button type="button" (click)="operator('/')">/</button>
   </section>
   <section class="buttons-2">
     <button type="button" (click)="pressNum('7')">7</button>
     <button type="button" (click)="pressNum('8')">8</button>
     <button type="button" (click)="pressNum('9')">9</button>
-    <button>*</button>
+    <button type="button" (click)="operator('*')">*</button>
   </section>
   <section class="buttons-3">
     <button type="button" (click)="pressNum('4')">4</button>
     <button type="button" (click)="pressNum('5')">5</button>
     <button type="button" (click)="pressNum('6')">6</button>
-    <button>-</button>
+    <button type="button" (click)="operator('-')">-</button>
   </section>
   <section class="buttons-4">
     <button type="button" (click)="pressNum('1')">1</button>
     <button type="button" (click)="pressNum('2')">2</button>
     <button type="button" (click)="pressNum('3')">3</button>
-    <button>-</button>
+    <button type="button" (click)="operator('+')">+</button>
   </section>
   <section class="buttons-5">
     <button type="button" (click)="pressNum('0')">.</button>

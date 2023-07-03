@@ -14,7 +14,35 @@ export class AppComponent {
 
   // Method triggered when a number button is pressed
   pressNum = (num: string) => {
-    console.log(num);
+    // Append the pressed number to the input and calculate the answer
     this.input = this.input + num;
   };
+
+  // Method triggered when an operator button is pressed
+  operator(op: string) {
+    // Do not allow operators more than once consecutively
+    const lastKey = this.input[this.input.length - 1];
+    if (
+      lastKey === '/' ||
+      lastKey === '*' ||
+      lastKey === '-' ||
+      lastKey === '+'
+    ) {
+      return;
+    }
+
+    // Append the pressed operator to the input and calculate the answer
+    this.input = this.input + op;
+  }
+
+  clear() {
+    if (this.input != '') {
+      this.input = this.input.slice(0, this.input.length - 1);
+    }
+  }
+
+  allClear() {
+    this.result = '';
+    this.input = '';
+  }
 }
