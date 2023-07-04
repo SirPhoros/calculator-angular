@@ -156,11 +156,22 @@
       </button>
     </section>
     <section>
-      <h2>Recent formulas:</h2>
-      <ul>
-        <li *ngFor="let item of history">{{ item }}</li>
+      <h2 class="text-center">Recent formulas:</h2>
+      <ul class="list-unstyled mb-0">
+        <li
+          *ngFor="let item of history"
+          class="input-box col-sm-12 form-control text-center bg-grey text-white"
+        >
+          {{ item }}
+        </li>
       </ul>
     </section>
   </section>
   <router-outlet></router-outlet>
 </body>
+
+<style>
+  .bg-grey {
+    background-color: grey;
+  }
+</style>
