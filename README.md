@@ -1,30 +1,54 @@
 # CalculatorAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This repository contains my calculator project, developed using `TypeScript`, `Angular`, and `Bootstrap`. The calculator provides basic functionality, allowing users to perform arithmetic calculations and view their operation history.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Basic arithmetic calculations
+- Operation history display
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+```bash
+git clone https://github.com/SirPhoros/calculator-angular
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Install the required dependencies:
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Run in local:
 
-## Running end-to-end tests
+```bash
+npm run start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+> You need to have installed Angular for this, for more information visit their [page](https://angular.io/guide/setup-local)
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Open the calculator application in your web browser.
+2. Enter numbers and perform calculations using the provided operators.
+3. View the history of your recent operations.
 
-# calculator-angular
-This a small app to learn how to use angular with TypeScript
+## Future Enhancements
+
+In the future, I plan to implement the following features:
+
+- Incorporating additional operators, such as `%` and `±`
+- Implementing parentheses for complex calculations
+- Introducing a Scientific Mode for advanced mathematical operations
+- Enhancing the user experience with a numeric keyboard input
+- Switch between light and dark mode for optimal accessibility.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions or improvements, please open an issue or submit a pull request.
+
+## Ownership
+
+This project has been made by [Cristóbal G. Torrubia](https://www.linkedin.com/in/cgtorrubia/)
