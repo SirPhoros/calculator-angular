@@ -145,9 +145,14 @@ export class AppComponent {
 
   // Method triggered when the equal button is pressed
   getAnswer() {
-    console.log(this.input, 'input', this.result, 'result');
     this.calcAnswer();
     this.history.push(`${this.input} = ${this.result}`);
+
+    if (this.history.length > 5) {
+      this.history = this.history.slice(this.history.length - 5); // Keep only the last 5 items
+      this.history.unshift('...'); // Add indicator at the beginning
+    }
+
     this.input = this.result;
     if (this.input == '0') this.result = '';
   }
