@@ -11,6 +11,7 @@ export class AppComponent {
   // Input and result variables to store the user input and calculated result
   input: string = '';
   result: string = '';
+  history: string[] = [];
 
   // Method triggered when a number button is pressed
   pressNum = (num: string) => {
@@ -144,8 +145,10 @@ export class AppComponent {
 
   // Method triggered when the equal button is pressed
   getAnswer() {
+    console.log(this.input, 'input', this.result, 'result');
     this.calcAnswer();
+    this.history.push(`${this.input} = ${this.result}`);
     this.input = this.result;
-    if (this.input == '0') this.input = '';
+    if (this.input == '0') this.result = '';
   }
 }

@@ -1,4 +1,5 @@
 <body>
+  <section class="Calculator"><h1>Cristobal's Calculator</h1></section>
   <section class="displayer">
     <!-- //Displays the User Input -->
     <section>
@@ -36,6 +37,12 @@
     <button type="button" (click)="pressNum('.')">.</button>
     <button type="button" (click)="pressNum('0')">0</button>
     <button type="button" (click)="getAnswer()">=</button>
+  </section>
+  <section>
+    <h2>Recent formulas:</h2>
+    <ul>
+      <li *ngFor="let item of history">{{ item }}</li>
+    </ul>
   </section>
 </body>
 <router-outlet></router-outlet>
