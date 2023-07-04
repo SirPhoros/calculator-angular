@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(101, 101, 101);
+}
+
+.Calculator .input-group-sm p {
+  background-color: darkgrey;
+  color: white;
+}
